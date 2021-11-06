@@ -1,0 +1,149 @@
+selectWords:
+
+button[data-test='quit-button']
+div[data-test='challenge challenge-translate']					# all the exercise
+h1[data-test='challenge-header']								# header ("escribe esto en español")
+div[data-test='challenge-translate-prompt']						# hint with the drawing
+	span[data-test='hint-sentence']								# hint sentence
+		div[data-test='hint-token']								# one for each word in the hint
+			span[data-test='hint-token']						# one for each word in the hint
+div[data-test='word-bank']										# whole the word bank 
+button[data-test='challenge-tap-token'] 						# one for each word in word bank
+button[data-test='player-skip']
+button[data-test='player-toggle-keyboard']
+button[data-test='player-next']
+             
+		
+		
+selectCard:
+
+button[data-test='quit-button']
+div[data-test='challenge challenge-select']						# all the exercise
+h1[data-test='challenge-header']								# header ("cual de estos es...")
+div[data-test='challenge-choice-card']							# one for each word in the hint
+	input[data-test='challenge-choice-card-input']				# one for each word in the hint
+div[data-test='word-bank']										# whole the word bank 
+button[data-test='player-skip']
+button[data-test='player-next']
+									  
+
+
+listen with wordbank:
+
+button[data-test='quit-button']
+div[data-test='challenge challenge-listenTap']					# all the exercise
+h1[data-test='challenge-header']								# header
+div[data-test='word-bank']										# whole the word bank 
+button[data-test='challenge-tap-token'] 						# one for each word in word bank
+button[data-test='player-skip']
+button[data-test='player-toggle-keyboard']
+button[data-test='player-next']
+
+
+
+listen with writing:
+
+button[data-test='quit-button']
+div[data-test='challenge challenge-listen']					# all the exercise
+h1[data-test='challenge-header']							# header
+textarea[data-test='challenge-translate-input']				# whole the word bank 
+button[data-test='player-skip']
+button[data-test='player-next']
+
+
+
+select sentence:
+
+button[data-test='quit-button']
+div[data-test='challenge challenge-judge']						# all the exercise
+h1[data-test='challenge-header']								# header
+div[data-test='challenge-choice']								# one for each choice
+	input[data-test='challenge-choice-card-input']				# one for each choice (the number)
+	div[data-test='challenge-judge-text']						# one for each choice (the text)
+button[data-test='player-skip']
+button[data-test='player-next']
+
+
+
+duo saying "good work"
+button[data-test='quit-button']
+button[data-test='player-next']
+
+
+
+speaking:
+button[data-test='quit-button']
+div[data-test='challenge challenge-speak']						# all the exercise
+h1[data-test='challenge-header']								# header ("repite esta oracion")
+span[data-test='hint-sentence']									# hint sentence
+	div[data-test='hint-token']									# one for each word in the hint
+		span[data-test='hint-token']							# one for each word in the hint
+button[data-test='challenge-speak-button']						# speak button 
+button[data-test='player-next']
+             
+			 
+
+writing:
+
+button[data-test='quit-button']
+div[data-test='challenge challenge-translate']					# all the exercise
+h1[data-test='challenge-header']								# header ("escribe esto en español")
+div[data-test='challenge-translate-prompt']						# hint with the drawing
+	span[data-test='hint-sentence']								# hint sentence
+		div[data-test='hint-token']								# one for each word in the hint
+			span[data-test='hint-token']						# one for each word in the hint
+textarea[data-test='challenge-translate-input']					# whole the word bank 
+button[data-test='player-skip']
+button[data-test='player-next']
+
+
+
+listening
+
+button[data-test='quit-button']
+div[data-test='challenge challenge-listen']						# all the exercise
+h1[data-test='challenge-header']								# header ("escribe esto en español")
+textarea[data-test='challenge-translate-input']					# whole the word bank 
+button[data-test='player-skip']
+button[data-test='player-next']
+
+
+
+final screen:
+
+div[data-test='player-end-carousel']							# all the layout
+h2[data-test='title']											# you win x XP
+div[data-test='answers-correct']								# this class is x XP
+button[data-test='player-next']
+button[data-test='no-thanks-to-plus']							# no-thanks-to-plus
+
+
+complete word:
+
+button[data-test='quit-button']
+div[data-test='challenge challenge-form']						# all the exercise
+h1[data-test='challenge-header']								# header ("escribe esto en español")
+div[data-test='challenge-form-prompt']							# hint with ____ 
+label[data-test='data-test='challenge-choice']					# one for each option (copleted option)
+	input[data-test='data-test='challenge-choice-card-input']	# one for each option (number)
+	div[data-test='challenge-judge-text']						# one for each option (text)
+button[data-test='player-next']
+
+
+
+complete word writing:
+
+button[data-test='quit-button']
+div[data-test='challenge challenge-completeReverseTranslation']	# all the exercise
+h1[data-test='challenge-header']								# header ("escribe esto en español")
+span[data-test='hint-sentence']									# hint sentence
+	div[data-test='hint-token']									# one for each word in the hint
+	span[data-test='hint-token']								# one for each space in the hint
+## before switch
+	input[data-test='challenge-text-input']							# ____ to complete  -> (I think parent of that have the answer)
+## after switch
+	textarea[data-test='challenge-text-input']
+button[data-test='player-toggle-keyboard']
+button[data-test='player-next']
+
+
