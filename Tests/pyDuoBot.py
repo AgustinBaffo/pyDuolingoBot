@@ -16,29 +16,33 @@ routes = myRoutes()
 
 if OS_WIDNOWS:
     print("Running for Windows")
+    
     routes.addPath("DRIVERS",routes.routes["ROOT"]+"\Drivers")
+    DRIVERS_PATH = routes.routes["DRIVERS"]
+    CHROME_DRIVER_PATH = DRIVERS_PATH + r"/chromedriver.exe"
+
     routes.addPath("LIBRARIES",routes.routes["ROOT"]+"\Libraries")
     routes.addPath("TESTS",routes.routes["ROOT"]+"\Tests")
     routes.addPath("LOCATORS",routes.routes["ROOT"]+"\Locators")
     routes.addPath("PAGES",routes.routes["ROOT"]+"\Pages")
     routes.addPath("PAGES",routes.routes["ROOT"]+"\Pages\Execises")
     routes.addPath("TRANSLATIONS",routes.routes["ROOT"]+"\Translations")
-    DRIVERS_PATH = routes.routes["DRIVERS"]
-    CHROME_DRIVER_PATH = DRIVERS_PATH + r"/chromedriver.exe"
     
 else:
     print("Running for Linux")
+
     routes.addPath("DRIVERS",routes.routes["ROOT"]+"/Drivers")
+    DRIVERS_PATH = routes.routes["DRIVERS"]
+    CHROME_DRIVER_PATH = "/usr/lib/chromium-browser/chromedriver"
+
     routes.addPath("LIBRARIES",routes.routes["ROOT"]+"/Libraries")
     routes.addPath("TESTS",routes.routes["ROOT"]+"/Tests")
     routes.addPath("LOCATORS",routes.routes["ROOT"]+"/Locators")
     routes.addPath("PAGES",routes.routes["ROOT"]+"/Pages")
     routes.addPath("PAGES",routes.routes["ROOT"]+"/Pages/Execises")
     routes.addPath("TRANSLATIONS",routes.routes["ROOT"]+"/Translations")
-
+    
 # routes.printCreation()
-
-
 
 driver = webdriver.Chrome("/usr/lib/chromium-browser/chromedriver")
 # Import my modules and clases
@@ -81,8 +85,8 @@ class Solver(unittest.TestCase):
         login = LoginPage(driver)
         login.clickStart()        
         time.sleep(2)
-        login.enterUsername("agusbaffo@hotmail.com")
-        login.enterPassword("bafferBot123")
+        login.enterUsername(self.USERNAME)
+        login.enterPassword(self.PASSWORD)
         login.clickLogin()       
         time.sleep(2)
 
