@@ -1,10 +1,10 @@
 class Locators():
 
     # LoginPage    
-    buttonStartXpath = "//a[contains(@data-test, 'have-account')]"
-    textboxUsernameXpath = "//input[contains(@data-test, 'email-input')]"
-    textboxPasswordXpath = "//input[contains(@data-test, 'password-input')]"
-    buttonLoginXpath = "//button[contains(@data-test, 'register-button')]"
+    buttonStartCS =     "button[data-test='have-account']"
+    textboxUsernameCS = "input[data-test='email-input']"
+    textboxPasswordCS = "input[data-test='password-input']"
+    buttonLoginCS =  "button[data-test='register-button']"
 
     # HomePage
     levelCS = "div[data-test='skill']"                  # any level
