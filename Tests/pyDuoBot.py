@@ -44,7 +44,6 @@ else:
     
 # routes.printCreation()
 
-driver = webdriver.Chrome("/usr/lib/chromium-browser/chromedriver")
 # Import my modules and clases
 from Libraries.globalFunctions import *
 
@@ -67,8 +66,8 @@ IMPLICIT_WAIT = 10
 
 class Solver(unittest.TestCase):
     def setUp(self):
-        self.USERNAME = ""
-        self.PASSWORD = ""
+        USERNAME = ""
+        PASSWORD = ""
         self.driver = webdriver.Chrome(executable_path = CHROME_DRIVER_PATH)
         turnOnImplicitWait(self.driver)
 
@@ -77,17 +76,20 @@ class Solver(unittest.TestCase):
         self.driver.quit()      #close windows
         print("*-*-* COMPLETED! *-*-*")
 
-    def test_login_valid(self):        
+    def test_login_valid(self):
+        print('username:', self.USERNAME)
+        print('password:', self.PASSWORD)
         driver = self.driver
         driver.get("https://www.duolingo.com/")
+
         # Login and home
         time.sleep(2)
         login = LoginPage(driver)
-        login.clickStart()        
+        login.clickStart()
         time.sleep(2)
         login.enterUsername(self.USERNAME)
         login.enterPassword(self.PASSWORD)
-        login.clickLogin()       
+        login.clickLogin()
         time.sleep(2)
 
         self.play()   
@@ -206,6 +208,7 @@ if __name__ == '__main__':
     
     # Set username and password
     params = dict(arg.split('=') for arg in sys.argv[1:])
+
     if all (k in params for k in ('user','password')):
         user = params['user']
         password = params['password']
@@ -217,4 +220,4 @@ if __name__ == '__main__':
     Solver.USERNAME = user
     Solver.PASSWORD = password
 
-    unittest.main()
+    unittest.main(argv=[''], exit=False)  # Ignore first arg
