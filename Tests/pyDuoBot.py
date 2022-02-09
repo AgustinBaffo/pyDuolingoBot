@@ -90,15 +90,13 @@ class Solver(unittest.TestCase):
         login.enterUsername(self.USERNAME)
         login.enterPassword(self.PASSWORD)
         login.clickLogin()
-        time.sleep(2)
-
+        time.sleep(2)        
         self.play()   
     
     def play(self):
         driver = self.driver
 
         while(True):
-            input()
             home = HomePage(driver)
             home.clickFirstAvailableLevel()
             input()

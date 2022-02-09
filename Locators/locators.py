@@ -7,11 +7,11 @@ class Locators():
     buttonLoginCS =  "button[data-test='register-button']"
 
     # HomePage
-    levelCS = "div[data-test='skill']"                  # any level
-    levelIconCS = "div[data-test='skill-icon']"         # any level
-    levelCrownsCS = "div[data-test='level-crown']"      # level with at leas 1 crown (inner html return number of crowns)
-    buttonLevelStartCS = "button[data-test='start-button']" 
-    levelTestCS = "div[data-test='checkpoint-badge']"
+    levelCS = "div[data-test='skill']"                      # any level
+    levelIconCS = "div[data-test='skill-icon']"             # any level
+    levelCrownsCS = "div[data-test='level-crown']"          # level with at leas 1 crown (inner html return number of crowns)
+    buttonLevelStartCS = "a[data-test='start-button']" 
+    levelTestCS = "div[data-test='checkpoint-badge']"       # Checkpoint (final test)
     homeCS = "a[data-test='home-nav']"
 
     # General in exercises (by CSS Selector)
