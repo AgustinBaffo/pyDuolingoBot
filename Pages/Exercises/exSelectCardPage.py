@@ -16,7 +16,7 @@ class ExSelectCardPage(Exercises):
     
     def solve(self):
         req = self.getReq()
-        print("req = "+req)
+        print("request = "+req)
         options = self.getCardsName()
         print(options)
 

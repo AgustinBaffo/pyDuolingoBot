@@ -27,11 +27,11 @@ class ExSelectSentence(Exercises):
         self.optionElement[self.optionList.index(w)].click()
     
     def solveKnown(self,trReq):
-        print("is known")
+        print("known request")
         self.clickByString(trReq)
 
     def solveUnknown(self):
-        print("is unknown")
+        print("unknown request")
         self.clickByIndex(0)        
         print("option 1 selected")
         time.sleep(1)
@@ -39,7 +39,7 @@ class ExSelectSentence(Exercises):
 
     def solve(self):
         req = self.getReq()
-        print("req = "+req)
+        print("request = "+req)
         options = self.getSentences()
         print(options)
 

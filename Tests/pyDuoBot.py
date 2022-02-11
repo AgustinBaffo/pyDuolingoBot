@@ -99,7 +99,6 @@ class Solver(unittest.TestCase):
         while(True):
             home = HomePage(driver)
             home.clickFirstAvailableLevel()
-            input()
             self.playLevel()
             print("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*")
             print("*-*-*-* END EXERCISE *-*-*-*-*")
@@ -116,56 +115,56 @@ class Solver(unittest.TestCase):
             print(exName)
             print("---------------------------------------------------------\n\n")            
             if exName == "selectWords":
-                print("is selectWords")
+                print("level = selectWords")
                 ex = ExSelectWordsPage(driver)
                 ex.solve()
                 print("solved")
             elif exName == "selectCards":
-                print("is selectCards")
+                print("level = selectCards")
                 ex = ExSelectCardPage(driver)
                 ex.solve()
                 print("solved")
             elif exName == "writing":
-                print("is writing")
+                print("level = writing")
                 ex = ExWriting(driver)
                 ex.solve()
                 print("solved")
             elif exName == "selectSentence":
-                print("is selectSentence")
+                print("level = selectSentence")
                 ex = ExSelectSentence(driver)
                 ex.solve()
                 print("solved")
             elif exName == "listenTap":
-                print("is listenTap")
+                print("level = listenTap")
                 ex = ExListenTap(driver)
                 ex.solve()
                 print("solved")
             elif exName == "listenWriting":
-                print("is listenWriting")
+                print("level = listenWriting")
                 ex = ExListenWriting(driver)
                 ex.solve()
                 print("solved")
             elif exName == "speaking":
-                print("is speaking")
+                print("level = speaking")
                 ex = ExSpeaking(driver)
                 ex.solve()
                 print("solved")
             elif exName == "completeWord":
-                print("is completeWord")
+                print("level = completeWord")
                 ex = ExCompleteWord(driver)
                 ex.solve()
                 print("solved")
             elif exName == "completeWordWriting":
-                print("is completeWordWriting")
+                print("level = completeWordWriting")
                 ex = ExCompleteWordWriting(driver)
                 ex.solve()
                 print("solved")
             elif exName == "duoSayHello":
-                print("is duoSayHello")
+                print("level = duoSayHello")
                 ex = ExDuoSayHello(driver)
                 ex.solve()
             elif exName == "final":
-                print("is final")
+                print("level = final page")
                 ex = ExFinalPage(driver)
                 ex.solve()
                 return

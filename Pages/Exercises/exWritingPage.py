@@ -16,19 +16,19 @@ class ExWriting(Exercises):
         self.textArea = Locators.writingTextArea
         
     def solveKnown(self,trReq):
-        print("is known")
+        print("known request")
         time.sleep(1)
         self.driver.find_element_by_css_selector(self.textArea).send_keys(str(trReq))
 
     def solveUnknown(self):
-        print("is unknown")
+        print("unknown request")
         time.sleep(1)
         self.driver.find_element_by_css_selector(self.textArea).send_keys("I don't know yet :(")
     
 
     def solve(self):
         req = self.getReq()
-        print("req = "+req)
+        print("request = "+req)
         trReq = translate(req,getTranslations()).lower()
         print("trReq = "+trReq)
 

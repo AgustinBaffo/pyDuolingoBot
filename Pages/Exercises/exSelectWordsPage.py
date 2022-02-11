@@ -22,7 +22,7 @@ class ExSelectWordsPage(Exercises):
         self.wordBankElement[self.wordBankList.index(w)].click()
     
     def solveKnown(self,trReq):
-        print("is known")
+        print("known request")
         trList = str2list(trReq)
         for w in trList:
             print("w = "+w)
@@ -30,7 +30,7 @@ class ExSelectWordsPage(Exercises):
             time.sleep(0.5)
 
     def solveUnknown(self):
-        print("is unknown")
+        print("unknown request")
         self.clickByIndex(0)        
         print("word 1 selected")
         time.sleep(1)
@@ -38,7 +38,7 @@ class ExSelectWordsPage(Exercises):
 
     def solve(self):
         req = self.getReq()
-        print("req = "+req)
+        print("request = "+req)
         options = self.getWordBank()
         print(options)
 

@@ -23,19 +23,19 @@ class ExCompleteWord(Exercises):
         self.optionElement[self.optionList.index(w)].click()
     
     def solveKnown(self,s):
-        print("is known")
+        print("known request")
         self.clickByString(s)
         print("clicked")
 
     def solveUnknown(self):
-        print("is unknown")
+        print("unknown request")
         self.clickByIndex(0)        
         print("word 1 selected")
         time.sleep(1)
 
     def solve(self):
         req = self.getReq()   # returns "bla bla ___ bla"
-        print("req = "+req)
+        print("request = "+req)
         options = self.getOptions()
         print(options)
 

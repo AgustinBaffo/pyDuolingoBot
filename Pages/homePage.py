@@ -15,12 +15,12 @@ class HomePage():
         self.home = Locators.homeCS
 
     def clickFirstAvailableLevel(self):
-        print("*-*-* clickFirstAvailableLevel *-*-*")
+        print("clicking first available level *-*-*")
         self.goHome() # This closes possible existing windows
         levels = self.getAllAvailableLevels()
         for l in levels:
             haveCorwns = len(l.find_elements_by_css_selector(self.levelCrownsCS))>0
-            print("haveCorwns = " + str(haveCorwns))
+            # print("haveCorwns = " + str(haveCorwns))
             if haveCorwns: # if "crown element" exists
                 crowns = int(l.find_element_by_css_selector(self.levelCrownsCS).get_attribute("innerHTML"))
                 if crowns < self.MAX_CROWNS:
