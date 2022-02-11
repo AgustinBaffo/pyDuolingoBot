@@ -30,7 +30,7 @@ class HomePage():
                 else:
                     continue    # if have 5 crowns, do not play it
             else:               # if element if enable but it don't have crowns, play it
-                print("don't have crowns => play it ")
+                print("level doesn't have crowns => play it ")
                 self.playLevel(l)
                 break
         # TODO: remember last index ? -> do not search any time duoBot finishes an exercise
