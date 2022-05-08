@@ -21,4 +21,4 @@ I want to clarify that I have not used this bot with my personal account and rea
 
 <p align="center"><img src="./Images/output2.gif" alt="login_example" width="640" class="center"/></p>
 
-<p align="center"><img src="./Images/duo_sings.gif" alt="duo_hello" width="250" class="center"/></p>
+<p align="center"><img src="./Images/duo_sings.gif" alt="duo_sings" width="250" class="center"/></p>
